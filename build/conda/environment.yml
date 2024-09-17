@@ -1,0 +1,11 @@
+name:
+    dockerland
+
+channels:
+    - conda-forge
+
+dependencies:
+    - conda-forge::ruff>0.4,<0.6
+    - python=3.12
+    - pip>23.0
+    - numpy>=1.25
