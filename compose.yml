@@ -1,0 +1,12 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    volumes:
+      - ./src:/app/src
+    environment:
+      - PYTHONUNBUFFERED=1
+    ports:
+      - "8000:8000"  # Adjust this if your app uses a different port
+    command: python src/main.py
