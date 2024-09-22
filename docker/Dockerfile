@@ -9,14 +9,8 @@ COPY build/conda/conda-lock.yml /app/conda-lock.yml
 
 # Install conda-lock and create the conda environment
 RUN conda install -c conda-forge conda-lock && \
-    conda-lock install --name myenv conda-lock.yml && \
+    conda-lock install --name dockerland conda-lock.yml && \
     conda clean -afy
 
-# Activate the conda environment
-SHELL ["conda", "run", "-n", "myenv", "/bin/bash", "-c"]
-
-# Copy the source code into the container
+# Copy the needed files into the container
 COPY src /app/src
-
-# Set the default command to run your application
-CMD ["python", "src/main.py"]

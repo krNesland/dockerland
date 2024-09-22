@@ -9,3 +9,4 @@ dependencies:
     - python=3.12
     - pip>23.0
     - numpy>=1.25
+    - fastapi=0.115.0
