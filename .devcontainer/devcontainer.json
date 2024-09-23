@@ -1,0 +1,14 @@
+{
+    "name": "Dockerland",
+    "dockerComposeFile": ["../compose.yml"],
+    "service": "app",
+    "workspaceFolder": "/app",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python"
+            ]
+        }
+    },
+    "overrideCommand": true
+}
